@@ -1,6 +1,9 @@
 ## WebRTC Voice Chat Service
 Минималистичный P2P голосовой чат на WebRTC с сигнализацией через WebSocket (STOMP). Работает через NAT/Firewall с TURN relay.
 
+<img width="314" height="586.4" alt="еуые-portrait" src="https://github.com/user-attachments/assets/0a07440d-c87b-4c1c-a6e0-381b32b7dc56" />
+<img width="3840" height="2160" alt="localhost_3000_ (1)" src="https://github.com/user-attachments/assets/9d535723-1ed3-46ef-b82b-c19f614da9f5" />
+
 ## Технологии
 * Frontend: Next.js 15 + TypeScript + React
 
