@@ -1,0 +1,42 @@
+"use client";
+interface RecordButtonProps {
+  isMute: boolean;
+  onClick: () => void;
+}
+
+export function RecordButton({ isMute, onClick }: RecordButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      className={`w-full py-4 rounded-lg transition-all duration-300 font-medium flex items-center justify-center space-x-3 ${
+        isMute
+          ? "bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30"
+          : "bg-indigo-500 hover:bg-indigo-600 text-white"
+      }`}
+    >
+      {isMute ? (
+        <>
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fillRule="evenodd"
+              d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span>Заглушить</span>
+        </>
+      ) : (
+        <>
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fillRule="evenodd"
+              d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span>Включить</span>
+        </>
+      )}
+    </button>
+  );
+}
