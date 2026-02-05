@@ -58,7 +58,7 @@ export function JoinSessionButton(props: {
       pc.ontrack = (event) => {
         console.log("Remote stream:", event.streams[0]?.id);
         audio.srcObject = event.streams[0];
-        audio.play().catch((e) => console.log("Audio play fail:", e)); // ✅
+        audio.play().catch((e) => console.log("Audio play fail:", e));
       };
     } catch (err) {
       console.error("Media error:", err); 
